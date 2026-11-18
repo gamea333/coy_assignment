@@ -50,14 +50,17 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-h1 {
-  font-size: 2.75rem;
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 1.02;
-}
-@media (max-width: 370px) {
-  h1 { font-size: 2.25rem; }
+/* In the base layer so Tailwind utility classes (e.g. text-[1.75rem]) can override these defaults. */
+@layer base {
+  h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+  }
+  @media (max-width: 370px) {
+    h1 { font-size: 2.25rem; }
+  }
 }
 
 /* Reusable Coy pieces */

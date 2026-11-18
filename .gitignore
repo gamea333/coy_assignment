@@ -43,3 +43,6 @@ data/*.db*
 
 # project planning notes (kept local)
 /docs/
+
+# Playwright MCP scratch files
+/.playwright-mcp/

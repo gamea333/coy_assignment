@@ -16,6 +16,20 @@ The look follows Coy's own app (colours, Bricolage Grotesque font, thick ink bor
 - Empty, loading and error states; respects "reduce motion"
 - 32 seeded profiles, 10 of whom have already liked you so matches happen in a demo
 
+## Screenshots
+
+Phone-size screens (390px wide):
+
+<table>
+  <tr><td align="center" valign="top"><img src="screenshots/01-home.png" width="250" alt="Home tab (blank placeholder)"><br><sub><b>Home tab (blank placeholder)</b></sub></td><td align="center" valign="top"><img src="screenshots/02-discover.png" width="250" alt="Discover: swipe card"><br><sub><b>Discover: swipe card</b></sub></td><td align="center" valign="top"><img src="screenshots/03-swipe-like.png" width="250" alt="Drag right: LIKE"><br><sub><b>Drag right: LIKE</b></sub></td></tr>
+  <tr><td align="center" valign="top"><img src="screenshots/04-swipe-pass.png" width="250" alt="Drag left: NOPE"><br><sub><b>Drag left: NOPE</b></sub></td><td align="center" valign="top"><img src="screenshots/06-match.png" width="250" alt="It's a match!"><br><sub><b>It's a match!</b></sub></td><td align="center" valign="top"><img src="screenshots/07-matches-list.png" width="250" alt="Matches list"><br><sub><b>Matches list</b></sub></td></tr>
+  <tr><td align="center" valign="top"><img src="screenshots/05-matches-empty.png" width="250" alt="Matches: empty state"><br><sub><b>Matches: empty state</b></sub></td><td align="center" valign="top"><img src="screenshots/09-empty-state.png" width="250" alt="Discover: no profiles left"><br><sub><b>Discover: no profiles left</b></sub></td></tr>
+</table>
+
+On desktop, the same column is centred, with the ✕ / ♥ buttons and a hint for the ← / → keys:
+
+<p align="center"><img src="screenshots/08-discover-desktop.png" width="640" alt="Discover on desktop"></p>
+
 ## Stack
 
 | Layer | Choice |
