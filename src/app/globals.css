@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
+/* Coy design tokens (from app.getcoy.com). See docs/DESIGN.md. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #fff;
+  --text: #15121d;
+  --muted: #6d6979;
+  --line: #ece9f2;
+  --soft: #f6f4fa;
+  --pink: #ff3d81;
+  --pink-strong: #d81e63;
+  --pink-soft: #ffe4ef;
+  --lilac: #e7e0ff;
+  --mint: #cbf4e0;
+  --yellow: #ffe45c;
+  --peach: #ffe1cf;
+  --sky: #d7ecff;
+  --edge: 2px solid var(--text);
+  --pop: 3px 3px 0 var(--text);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-ink: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-soft: var(--soft);
+  --color-pink: var(--pink);
+  --color-pink-strong: var(--pink-strong);
+  --color-pink-soft: var(--pink-soft);
+  --color-lilac: var(--lilac);
+  --color-mint: var(--mint);
+  --color-yellow: var(--yellow);
+  --color-peach: var(--peach);
+  --color-sky: var(--sky);
+  --font-sans: var(--font-bricolage), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --shadow-pop: var(--pop);
+  --shadow-pop-lg: 5px 5px 0 var(--text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+@media (max-width: 370px) {
+  h1 { font-size: 2.25rem; }
+}
+
+/* Reusable Coy pieces */
+@utility edge {
+  border: var(--edge);
+}
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 54px;
+  padding: 0 22px;
+  border: var(--edge);
+  border-radius: 999px;
+  box-shadow: var(--pop);
+  background: var(--pink);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+  transition: transform 0.08s, box-shadow 0.08s;
+  &:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+  }
+}
+
+/* Keyboard focus: visible pink ring (Coy pink). */
+:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
+}
+
+/* Reduced motion: stop pulsing skeletons and button/tab transitions. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse { animation: none; }
+  * { transition-duration: 0.01ms !important; }
 }
